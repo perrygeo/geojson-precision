@@ -1,13 +1,15 @@
 # geojson-precision
 
-Python function and command line interface to adjust the precision of GeoJSON coordinate positions.
+Python function and command line interface to adjust the precision of GeoJSON coordinates.
 
-The GeoJSON specification recommends no more than 6 decimal places for latitude and longitude.
-This equates to roughly 10cm of precision. You may need slightly more for certain applications.
+The GeoJSON specification recommends 6 decimal places for latitude and longitude which
+equates to roughly 10cm of precision. You may need slightly more for certain applications;
+9 decimal places would be sufficient for professional survey-grade GPS coordinates. 
 
-But many GeoJSON writers provide excessive precision, up to 15 decimal places which is not only
-so microscopically small as to be irrelevant for any geospatial application, it also inflates
-file sizes, wastes bandwidth, and increases the chances for floating-point inconsistencies.
+But many GeoJSON writers provide excessive precision, up to 15 decimal places which is 
+so microscopically small as to be irrelevant for any geospatial application.
+This excessive precision inflates file sizes, reduces human readability, wastes bandwidth,
+and increases the chances for floating-point inconsistencies.
 
 So instead of 
 ```
