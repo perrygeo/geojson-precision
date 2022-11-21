@@ -20,7 +20,7 @@ setup(name='geojson-precision',
       packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
       include_package_data=True,
       zip_safe=False,
-      install_requires=['click', 'cligj', 'shapely'],
+      install_requires=['click', 'cligj', 'shapely>=1,<2'],
       entry_points="""
       [console_scripts]
       geojson-precision=geojson_precision.cli:main
